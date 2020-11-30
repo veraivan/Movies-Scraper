@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/veraivan/Movies-Scraper/master/.extra/logo.png" width="300" height="150">
+    <img src="https://raw.githubusercontent.com/veraivan/Movies-Scraper/main/.extra/logo.png" width="300" height="240">
 </p>
 <br>
 <p align="center">
@@ -12,18 +12,18 @@
 
 ## Features!
 
-    - Scraping the links using multi-threading.
-    - Execution of javascript code from python.
-    - Tag extraction using the lxml library.
-    - Use of the gibberish-aes and atob javascript library for the decoding of the links.
+- Scraping the links using multi-threading.
+- Execution of javascript code from python.
+- Tag extraction using the lxml library.
+- Use of the gibberish-aes and atob javascript library for the decoding of the links.
 
 ## Supported sites 
 
 Currently the script supports the following download sites: 
 
-    - `hacksotre.net`
-    - `peliculas1mega.com`
-    - `mega1080p.org`
+- hacksotre.net
+- peliculas1mega.com`
+- mega1080p.org
 
 ## Installation guide 
 
