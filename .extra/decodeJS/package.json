@@ -1,0 +1,12 @@
+{
+  "name": "decodeJS",
+  "version": "1.0.0",
+  "description": "Code that obtains the decoded link. Using atob and GibberishAES",
+  "main": "decode.js",
+  "author": "Ivan Vera",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "gibberish-aes": "^1.0.0"
+  }
+}
