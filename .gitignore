@@ -1,0 +1,8 @@
+#Ignore folder node_modules
+.extra/decodeJS/node_modules/ 
+
+#Ignore package lock json 
+.extra/decodeJS/package-lock.json 
+
+#Ignore pycache
+.extra/__pycache__/
