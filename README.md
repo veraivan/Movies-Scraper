@@ -17,18 +17,18 @@
 - Tag extraction using the lxml library.
 - Use of the gibberish-aes and atob javascript library for the decoding of the links.
 
-## :pushpin: Supported sites 
-
-Currently the script supports the following download sites: 
-
-- hackstore.net
-- peliculas1mega.com
-- mega1080p.org
+## :pushpin: Supported sites
+ 
+| Site | URL |  
+| :--: | :--:|
+| **Hackstore** | <https://hackstore.net> | 
+| **Tu Mega Descarga** | <https://www.peliculas1mega.com> |
+| **Mega 1080p** | <https://mega1080p.org> |
 
 ## :point_right: Installation guide 
 
 Before starting the execution of the script in python, you need to install the dependencies to run the javascript file with node. 
-> First you need to have a node version higher than 12 installed. 
+> First you need to install nodejs.
 
 ```sh
 $ cd Movies-Scraper/.extra/decodeJS
