@@ -1,4 +1,7 @@
-import requests, random, lxml.html, useragent, re, os, base64
+import requests
+import lxml.html 
+import useragent 
+import re, os, base64, time, random
 from threading import Thread, Lock 
 
 
@@ -15,7 +18,11 @@ key = []
 
 def extract_links_page(url):
     host = re.search(r'(?<=//)[^\/]*', url)
-    dispatcher[host.group(0)](url)
+    if host.group(0) in dispatcher:
+        print(f"\nStart Movies-Scraper at {time.strftime('%H:%M:%S')}", end='\n\n')
+        dispatcher[host.group(0)](url)
+    else:
+        print(f"{light_red}[{white}!{light_red}] The site to extract the links is not available{null}", end='\n')
 
 
 def f1_extract(url):
@@ -44,7 +51,7 @@ def start_scrap(body, lock):
         with lock:
             print(f"{blue}[{white}+{blue}] {body[0]}", end='\n ')
             print(*servers, sep='\n ')
-            print("")
+            print("") 
 
 
 #Extract link for each td of content 
@@ -109,8 +116,9 @@ def f3_extract(url):
     tag_tbody = lxml.html.fromstring(site.content).xpath('//table/tbody')[1]
     tr_list = tag_tbody.xpath('./tr')[:-1] 
     work_thread((start_f3, tr_list))
-    print(f"{blue}[{white}+{blue}] Links", end=f'\n{yellow}')
+    print(f"{blue}[{white}+{blue}] Links{null}", end=f'\n\n')
     work_thread((get_link, key))
+    print("")
 
 
 def get_link(url, lock):
@@ -138,7 +146,7 @@ def get_link(url, lock):
         list_href = tag_div.xpath('./a/@href')
         decode_links = [ decode_base64(href) for href in list_href ]
     with lock:
-        print(*decode_links, sep=f'\n{yellow}')
+        print(*decode_links, sep=f'\n')
 
 
 def decode_base64(link):
